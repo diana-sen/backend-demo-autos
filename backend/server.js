@@ -1,1 +1,8 @@
-console.log("Hello, this will be the server")
+const express = require('express')
+const dotenv = require('dotenv').config()
+const port = process.env.PORT || 5000
+
+//create server and app
+
+const app = express()
+app.listen(port, () =>console.log(`server started on port ${port}`))

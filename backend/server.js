@@ -6,3 +6,6 @@ const port = process.env.PORT || 5000
 
 const app = express()
 app.listen(port, () =>console.log(`server started on port ${port}`))
+
+app.use('/api/autos',require('./routes/autosRoutes'))
+

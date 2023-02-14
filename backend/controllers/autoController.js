@@ -5,6 +5,10 @@ const getAutos = (req, res) => {
 
 // POST method route
 const postAutos = (req, res) => {
+    if(!req.body.texto){
+        res.status(400)
+        throw new Error('Please provide auto information')
+    }
     res.status(201).json({message: 'Created Auto'})
 }
 
